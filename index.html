@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <h1>Calculadora :)</h1>
+      <div id="form">
+        <input type="number" id="n1" placeholder="Digite seu primeiro número" />
+        <select name="selector" id="selector">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="x">x</option>
+          <option value="/">/</option>
+          <input
+            type="number"
+            id="n2"
+            placeholder="Digite seu primeiro número"
+          />
+        </select>
+        <br />
+        <button onclick="calcular()">Calcular :)</button>
+        <h3 id="resultado"></h3>
+        <p id="me">Projeto criado por Gustavo Rice :)</p>
+      </div>
+    </div>
+    <div class="box2">
+      <h1>Esse projeto foi desenvolvido com:</h1>
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>JavaScript</p>
+      <br />
+
+      <h4>Também usei como referências os url's abaixo:</h4>
+      <a
+        href="https://html-css-js.com/css/generator/box-shadow/"
+        target="_blank"
+        >Drop Shadow Generator</a
+      >
+      <a href="https://www.bestcssbuttongenerator.com" target="_blank"
+        >CSSButtons</a
+      >
+      <a href="https://www.w3schools.com" target="_blank">W3schools</a>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
