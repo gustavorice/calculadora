@@ -1,59 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="box">
-      <h1>Calculadora :)</h1>
-      <div id="form">
-        <input type="number" id="n1" placeholder="Digite seu primeiro número" />
-        <select name="selector" id="selector">
-          <option value="+">+</option>
-          <option value="-">-</option>
-          <option value="x">x</option>
-          <option value="/">/</option>
-          <input
-            type="number"
-            id="n2"
-            placeholder="Digite seu primeiro número"
-          />
-        </select>
-        <br />
-        <button onclick="calcular()">Calcular :)</button>
-        <h3 id="resultado"></h3>
-        <p id="me">Projeto criado por Gustavo Rice :)</p>
-      </div>
-    </div>
-    <div class="box2">
-      <h1>Esse projeto foi desenvolvido com:</h1>
-      <p>HTML</p>
-      <p>CSS</p>
-      <p>JavaScript</p>
-      <br />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURALIS | Design Gráfico 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AURALIS</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-      <h4>Também usei como referências os url's abaixo:</h4>
-      <a
-        href="https://html-css-js.com/css/generator/box-shadow/"
-        target="_blank"
-        >Drop Shadow Generator</a
-      >
-      <a href="https://www.bestcssbuttongenerator.com" target="_blank"
-        >CSSButtons</a
-      >
-      <a href="https://www.w3schools.com" target="_blank">W3schools</a>
-    </div>
-  </body>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">DESIGN</span>
+                <span class="title-line">QUE</span>
+                <span class="title-line">ESCUTA</span>
+            </h1>
+            <p class="hero-subtitle">Objetos 3D • Efeitos Visuais • Arte Digital</p>
+            <div class="hero-ear-icon">👂</div>
+        </div>
+        <div id="hero-canvas" class="canvas-container"></div>
+        <div class="scroll-indicator">
+            <span>Role para explorar</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-  <script src="index.js"></script>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="section-header">
+            <h2>GALERIA 3D</h2>
+            <p>Explore nossos objetos tridimensionais interativos</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div id="canvas-1" class="canvas-3d"></div>
+                <div class="item-info">
+                    <h3>Orelha Minimalista</h3>
+                    <p>Design clean e moderno</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div id="canvas-2" class="canvas-3d"></div>
+                <div class="item-info">
+                    <h3>Orelha Abstrata</h3>
+                    <p>Formas geométricas</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div id="canvas-3" class="canvas-3d"></div>
+                <div class="item-info">
+                    <h3>Orelha Futurista</h3>
+                    <p>Estética cyberpunk</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div id="canvas-4" class="canvas-3d"></div>
+                <div class="item-info">
+                    <h3>Orelha Orgânica</h3>
+                    <p>Curvas naturais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>SOBRE AURALIS</h2>
+                <p class="about-description">
+                    Somos um estúdio de design gráfico especializado em criar experiências visuais 
+                    imersivas através de objetos 3D e efeitos digitais. Nossa filosofia é simples: 
+                    <strong>design que escuta</strong>.
+                </p>
+                <p class="about-description">
+                    Cada projeto é uma jornada sensorial, onde a forma encontra a função e a 
+                    estética minimalista se une à tecnologia de ponta. Trabalhamos com orelhas 
+                    como símbolo de nossa atenção aos detalhes e nossa capacidade de ouvir 
+                    as necessidades de cada cliente.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projetos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Clientes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Prêmios</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div id="about-canvas" class="canvas-3d-large"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👂</div>
+                <h3>Escuta Ativa</h3>
+                <p>Entendemos suas necessidades antes de criar</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Design Minimalista</h3>
+                <p>Menos é mais, sempre com elegância</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Efeitos 3D</h3>
+                <p>Objetos tridimensionais interativos</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Atenção aos Detalhes</h3>
+                <p>Cada pixel importa no resultado final</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>VAMOS CONVERSAR?</h2>
+            <p class="contact-subtitle">Estamos prontos para ouvir sua ideia</p>
+            <div class="contact-info">
+                <a href="mailto:contato@auralis.design" class="contact-link">contato@auralis.design</a>
+                <div class="contact-ear">👂</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">AURALIS</div>
+            <p class="footer-tagline">Design que escuta • Criado com paixão</p>
+            <div class="footer-ears">👂 👂 👂</div>
+            <p class="footer-copy">&copy; 2025 Auralis Design Studio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="index.js"></script>
+</body>
 </html>
